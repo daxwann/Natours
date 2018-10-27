@@ -204,7 +204,7 @@ body {
   background-color: #55c57a;
   color: #fff; }
 
-.btn .btn-text:link, .btn .btn-text:visited {
+.btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
   color: #55c57a;
   display: inline-block;
@@ -213,13 +213,13 @@ body {
   padding: 3px;
   transition: all .2s; }
 
-.btn .btn-text:hover {
+.btn-text:hover {
   background-color: #55c57a;
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transform: translateY(-2px); }
 
-.btn .btn-text:active {
+.btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   transform: translateY(0); }
 
@@ -513,7 +513,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 75%;
-    height: 80%;
+    height: 60%;
     background-color: #fff;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
     border-radius: 3px;
@@ -526,11 +526,11 @@ body {
     backface-visibility: hidden; }
     @media (max-width: 75em) {
       .popup__content {
-        height: 85%;
+        height: 60%;
         width: 80%; } }
     @media (max-width: 56.25em) {
       .popup__content {
-        width: 90%;
+        width: 85%;
         height: 90%; } }
   .popup:target {
     opacity: 1;
@@ -539,13 +539,14 @@ body {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1); }
   .popup__left {
-    width: 33%;
+    width: 35%;
     height: 100%;
     display: block;
     float: left;
     background-image: url("../img/nat-8.jpg");
     background-position: center;
-    background-size: cover; }
+    background-size: cover;
+    backface-visibility: hidden; }
     @media (max-width: 56.25em) {
       .popup__left {
         width: 100%;
@@ -553,7 +554,7 @@ body {
         float: none;
         background-position: center; } }
   .popup__right {
-    width: 67%;
+    width: 65%;
     height: 100%;
     display: table;
     float: left;
@@ -615,7 +616,6 @@ body {
     width: 15rem;
     height: 15rem;
     float: left;
-    background-color: orangered;
     -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
@@ -629,7 +629,7 @@ body {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
     backface-visibility: hidden;
-    transition: all .5s; }
+    transition: transform .5s; }
   .story__text {
     transform: skewX(12deg); }
     @media (max-width: 37.5em) {
@@ -819,7 +819,7 @@ body {
   width: 0;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -100vw;
   z-index: 150;
   opacity: 0;
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
@@ -862,7 +862,8 @@ body {
 
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
-  width: 100%; }
+  width: 100%;
+  left: 0; }
 
 .navigation__icon {
   position: relative;

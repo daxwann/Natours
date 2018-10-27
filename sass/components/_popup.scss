@@ -13,7 +13,7 @@
     &__content {
       @include absCenter;
       width: 75%;
-      height: 80%;
+      height: 60%;
       background-color: $color-white;
       box-shadow: 0 2rem 4rem rgba($color-black, .2);
       border-radius: 3px;
@@ -26,12 +26,12 @@
       backface-visibility: hidden;
 
       @include respond(tab-land){
-        height: 85%;
+        height: 60%;
         width: 80%;
       }
 
       @include respond(tab-port){
-        width: 90%;
+        width: 85%;
         height: 90%;
       }
     }
@@ -48,13 +48,14 @@
   }
 
   &__left {
-    width: 33%;
+    width: 35%;
     height: 100%;
     display: block;
     float: left;
     background-image: url("../img/nat-8.jpg");
     background-position: center;
     background-size: cover;
+    backface-visibility: hidden;
 
     @include respond(tab-port){
       width: 100%;
@@ -65,7 +66,7 @@
   }
 
   &__right {
-    width: 67%;
+    width: 65%;
     height: 100%;
     display: table;
     float: left;

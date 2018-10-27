@@ -37,6 +37,7 @@
     background-color: $color-primary;
     color: $color-white;
   }
+}
 
 .btn-text {
   &:link,
@@ -61,5 +62,4 @@
     box-shadow: 0 .5rem 1rem rgba($color-black, 0.1);
     transform: translateY(0);
   }
-}
 }
